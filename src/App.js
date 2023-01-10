@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
-
+import {Canvas} from "@react-three/fiber"
+import {OrbitControls} from "@react-three/drei"
+import Camera from './components/Camera'
+import Matcap from './components/Matcap'
+import Bricks from './components/Bricks'
+import { Suspense } from "react"
+import Lights from "./components/Lights"
+import { Environment } from '@react-three/drei'
+import { Minecraft } from "./components/Minecraft"
+import * as THREE from 'three'
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div
+      className="Container"
+      style={{width:"100%", height:"100vh"}}
+    >
+      <Canvas shadowMap shadows='true'
+      gl={{
+        antialias: true,
+        toneMapping: THREE.ReinhardToneMapping,
+        toneMappingExposure: 1.5
+      }}>
+        <Camera/>
+        <Lights/>
+        <mesh 
+        position = {[3,0,0]} 
+        rotation-z={Math.PI * 0.25}
+        rotation-x={Math.PI * 0.25}
         >
-          Learn React
-        </a>
-      </header>
+          <torusKnotBufferGeometry args={[.3,.1,100,100]}/>
+          <meshNormalMaterial flatShading={true}/>
+        </mesh>
+        <Suspense fallback={null}>
+
+        <Matcap />
+        <Minecraft />
+        <Bricks />
+        <Environment files={'./hdr/decor_shop_1k.hdr'}/>
+        </Suspense>
+        <OrbitControls target={[1,10,0]}/>
+      </Canvas>
     </div>
-  );
+  )
 }
 
 export default App;
