@@ -2,7 +2,7 @@
   "name": "fiber-basics",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://GabrielKDK.github.io//Minecraft-React-THREE",
+  "homepage": "https://GabrielKDK.github.io/Minecraft-React-THREE",
   "dependencies": {
     "@react-three/drei": "^9.51.23",
     "@react-three/fiber": "^8.10.0",
