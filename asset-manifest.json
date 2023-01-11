@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Minecraft-React-THREE/static/css/main.e6c13ad2.css",
+    "main.js": "/Minecraft-React-THREE/static/js/main.9108b3eb.js",
+    "static/js/787.4d9c4114.chunk.js": "/Minecraft-React-THREE/static/js/787.4d9c4114.chunk.js",
+    "index.html": "/Minecraft-React-THREE/index.html",
+    "main.e6c13ad2.css.map": "/Minecraft-React-THREE/static/css/main.e6c13ad2.css.map",
+    "main.9108b3eb.js.map": "/Minecraft-React-THREE/static/js/main.9108b3eb.js.map",
+    "787.4d9c4114.chunk.js.map": "/Minecraft-React-THREE/static/js/787.4d9c4114.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.9108b3eb.js"
+  ]
+}
